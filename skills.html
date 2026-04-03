@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Braiden K. Arriola</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-body">
+
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-box">
+        <span>Braiden</span>
+      </div>
+    </a>
+    <div class="site-clock" id="clock"></div>
+  </header>
+
+  <main class="inner-main">
+    <p class="section-heading">Skills</p>
+
+    <div class="skills-section">
+      <div class="skills-label">Languages</div>
+      <div class="skills-list">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">C++</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-label">Libraries</div>
+      <div class="skills-list">
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Scikit-Learn</span>
+        <span class="skill-tag">Seaborn</span>
+        <span class="skill-tag">ggplot2</span>
+        <span class="skill-tag">MASS</span>
+        <span class="skill-tag">car</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-label">Product Management</div>
+      <div class="skills-list">
+        <span class="skill-tag">RICE Scoring</span>
+        <span class="skill-tag">PRD Authoring</span>
+        <span class="skill-tag">AIDA Framework</span>
+        <span class="skill-tag">User Journey Mapping</span>
+        <span class="skill-tag">Competitive Analysis</span>
+        <span class="skill-tag">Feature Backlog Prioritization</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-label">Tools</div>
+      <div class="skills-list">
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">Google Sheets</span>
+        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">Kaggle</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-label">Coursework</div>
+      <div class="skills-list">
+        <span class="skill-tag">Data Analysis & Regression</span>
+        <span class="skill-tag">Computational Statistics with R</span>
+        <span class="skill-tag">Mathematical Statistics</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="inner-footer">
+      <a href="projects.html">projects</a>
+      <a href="experience.html">experience</a>
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      const yyyy = now.getFullYear();
+      let h = now.getHours();
+      const min = String(now.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'pm' : 'am';
+      h = h % 12 || 12;
+      document.getElementById('clock').textContent =
+        mm + '/' + dd + '/' + yyyy + ' ' + h + ':' + min + ampm;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Braiden K. Arriola</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-body">
+
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-box">
+        <span>Braiden</span>
+      </div>
+    </a>
+    <div class="site-clock" id="clock"></div>
+  </header>
+
+  <main class="inner-main">
+    <p class="section-heading">Projects</p>
+
+    <div class="project-entry">
+      <div class="project-title">Kaggle Housing Price Prediction</div>
+      <div class="project-stack">R — ggplot2, MASS, car</div>
+      <ul>
+        <li>Placed 6th out of 69 teams predicting housing prices across 7,000 records with 93% accuracy</li>
+        <li>Engineered 10+ features across size, quality, and location, improving model fit over 4 iterations</li>
+        <li>Selected the final model by comparing 4 candidates using statistical validation techniques</li>
+        <li>Validated model assumptions through diagnostic testing, flagging 400+ influential observations</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-title">Billboard Top 100 Analysis</div>
+      <div class="project-stack">R — ggplot2</div>
+      <ul>
+        <li>Analyzed 3,000+ tracks with a team of 4 to identify musical trends predicting charting success</li>
+        <li>Segmented 20 years of data into 5-year cohorts and applied t-tests across 14 variables</li>
+        <li>Identified tempo, key, and genre shifts as top charting predictors across 4 distinct musical eras</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-title">Housing Market Predictive Analysis</div>
+      <div class="project-stack">Python — NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn</div>
+      <ul>
+        <li>Built a Linear Regression model on 500+ housing records to predict property values</li>
+        <li>Performed feature selection across 12 variables to identify top pricing drivers</li>
+        <li>Presented model insights to stakeholders via a concise 3-slide executive summary</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="inner-footer">
+      <a href="experience.html">experience</a>
+      <a href="skills.html">skills</a>
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      const yyyy = now.getFullYear();
+      let h = now.getHours();
+      const min = String(now.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'pm' : 'am';
+      h = h % 12 || 12;
+      document.getElementById('clock').textContent =
+        mm + '/' + dd + '/' + yyyy + ' ' + h + ':' + min + ampm;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

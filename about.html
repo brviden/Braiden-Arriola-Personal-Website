@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Braiden K. Arriola</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-body">
+
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-box">
+        <span>Braiden</span>
+      </div>
+    </a>
+    <div class="site-clock" id="clock"></div>
+  </header>
+
+  <main class="inner-main">
+    <p class="section-heading">About</p>
+
+    <div class="about-text">
+      <p>
+        Braiden K. Arriola is a Statistics and Data Science student at the University of California,
+        Los Angeles, expected to graduate in June 2027.
+      </p>
+      <p>
+        His work sits at the intersection of data analytics, product management, and predictive
+        modeling — applying statistical rigor to real business problems and translating findings
+        into clear narratives for stakeholders.
+      </p>
+      <p>
+        At BeReal, he mapped user journeys across 20M+ users and authored product requirement
+        documents grounded in evidence. At Beats By Dre, he built consumer insight dashboards
+        and delivered executive strategy reports that aligned cross-functional teams.
+      </p>
+      <p>
+        His analytical projects include a Kaggle Housing Price Prediction model that placed 6th
+        out of 69 teams with 93% accuracy, and a Billboard Top 100 analysis identifying musical
+        trends across two decades of chart data.
+      </p>
+      <p>
+        Based in West Hills, California. Open to internships and collaborative work.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="inner-footer">
+      <a href="projects.html">projects</a>
+      <a href="experience.html">experience</a>
+      <a href="skills.html">skills</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      const yyyy = now.getFullYear();
+      let h = now.getHours();
+      const min = String(now.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'pm' : 'am';
+      h = h % 12 || 12;
+      document.getElementById('clock').textContent =
+        mm + '/' + dd + '/' + yyyy + ' ' + h + ':' + min + ampm;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

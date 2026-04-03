@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Braiden K. Arriola</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-body">
+
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-box">
+        <span>Braiden</span>
+      </div>
+    </a>
+    <div class="site-clock" id="clock"></div>
+  </header>
+
+  <main class="inner-main">
+    <p class="section-heading">Contact</p>
+
+    <div>
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <a href="mailto:koaxx316@gmail.com" class="contact-value">koaxx316@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/brviden" target="_blank" class="contact-value">github.com/brviden</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/braidena" target="_blank" class="contact-value">linkedin.com/in/braidena</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">West Hills, CA</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Resume</span>
+        <a href="brand_assets/Braiden K. Arriola Resume 2026 (13).pdf" target="_blank" class="contact-value">Download PDF ↗</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="inner-footer">
+      <a href="projects.html">projects</a>
+      <a href="experience.html">experience</a>
+      <a href="skills.html">skills</a>
+      <a href="about.html">about</a>
+    </div>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      const yyyy = now.getFullYear();
+      let h = now.getHours();
+      const min = String(now.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'pm' : 'am';
+      h = h % 12 || 12;
+      document.getElementById('clock').textContent =
+        mm + '/' + dd + '/' + yyyy + ' ' + h + ':' + min + ampm;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

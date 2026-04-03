@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Braiden K. Arriola</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-body">
+
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-box">
+        <span>Braiden</span>
+      </div>
+    </a>
+    <div class="site-clock" id="clock"></div>
+  </header>
+
+  <main class="inner-main">
+    <p class="section-heading">Experience</p>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">BeReal (via Extern Inc.)</span>
+        <span class="exp-location">Los Angeles, CA</span>
+      </div>
+      <div class="exp-sub">
+        <span class="exp-role">Product Management Extern</span>
+        <span class="exp-date">December 2025 – February 2026</span>
+      </div>
+      <ul>
+        <li>Mapped user journeys across 20M+ users, surfacing 5+ friction points to prioritize the product roadmap</li>
+        <li>Authored a PRD and prioritized the feature backlog using RICE scoring across 1 assigned sprint</li>
+        <li>Validated 2 feature concepts via user testing, refining specs before development handoff</li>
+        <li>Benchmarked 3+ competitors to identify feature gaps and support go-to-market differentiation</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Beats By Dre (via Extern Inc.)</span>
+        <span class="exp-location">Los Angeles, CA</span>
+      </div>
+      <div class="exp-sub">
+        <span class="exp-role">Data Analytics & Consumer Insights Extern</span>
+        <span class="exp-date">October 2025 – January 2026</span>
+      </div>
+      <ul>
+        <li>Analyzed 500+ consumer reviews using Python (Pandas) to surface audio trends for roadmap decisions</li>
+        <li>Built Matplotlib dashboards across 3+ product categories for data-driven stakeholder presentations</li>
+        <li>Delivered a 10-slide executive report aligning cross-functional teams on evidence-based product strategy</li>
+        <li>Applied AIDA framework to identify 4 engagement drivers shaping feature design recommendations</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Journeys</span>
+        <span class="exp-location">Canoga Park, CA</span>
+      </div>
+      <div class="exp-sub">
+        <span class="exp-role">Sales Associate & Shipment Coordinator</span>
+        <span class="exp-date">July 2022 – September 2025</span>
+      </div>
+      <ul>
+        <li>Maintained 100% inventory accuracy across 200+ weekly shipments, eliminating store-wide discrepancies</li>
+        <li>Trained 3–5 new hires on product knowledge and upsell strategies, driving a 10% monthly sales increase</li>
+        <li>Boosted promotional sales 10% by optimizing visual merchandising across a 200+ SKU catalog</li>
+        <li>Guided purchasing decisions for 100+ weekly customers using product knowledge to drive conversions</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="inner-footer">
+      <a href="projects.html">projects</a>
+      <a href="skills.html">skills</a>
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      const yyyy = now.getFullYear();
+      let h = now.getHours();
+      const min = String(now.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'pm' : 'am';
+      h = h % 12 || 12;
+      document.getElementById('clock').textContent =
+        mm + '/' + dd + '/' + yyyy + ' ' + h + ':' + min + ampm;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
