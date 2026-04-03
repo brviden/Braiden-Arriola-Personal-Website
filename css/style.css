@@ -22,6 +22,15 @@ html, body {
   min-height: 100vh;
 }
 
+body {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.visible {
+  opacity: 1;
+}
+
 a {
   color: var(--white);
   text-decoration: none;
@@ -104,12 +113,12 @@ a:hover {
   display: inline-block;
   width: fit-content;
   font-size: 13px;
-  line-height: 2.7;
   letter-spacing: 0.2px;
   color: var(--white);
   text-decoration: none;
-  padding: 0 5px;
-  margin-left: -5px;
+  padding: 1px 4px;
+  margin-left: -4px;
+  margin-bottom: 10px;
 }
 
 .home-nav a:hover {
