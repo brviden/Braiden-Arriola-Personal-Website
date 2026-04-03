@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.remove('visible');
       setTimeout(function () {
         window.location.href = href;
-      }, 150);
+      }, 80);
     });
   });
 });
