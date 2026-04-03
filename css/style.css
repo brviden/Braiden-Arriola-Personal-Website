@@ -52,7 +52,7 @@ a:hover {
 .logo-box {
   display: inline-block;
   background: var(--red);
-  padding: 5px 18px 8px;
+  padding: 3px 8px 5px;
   line-height: 1;
 }
 
@@ -61,7 +61,7 @@ a:hover {
   font-style: italic;
   font-weight: 700;
   color: var(--white);
-  font-size: 33px;
+  font-size: 38px;
   letter-spacing: 0.5px;
   display: block;
 }
