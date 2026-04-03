@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Fade out before navigating away
   document.querySelectorAll('a[href]').forEach(function (link) {
     var href = link.getAttribute('href');
-    // Only handle same-site page links, not anchors or external links
     if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
         href.startsWith('http') || link.target === '_blank') return;
 
@@ -16,7 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.remove('visible');
       setTimeout(function () {
         window.location.href = href;
-      }, 300);
+      }, 150);
     });
   });
+});
+
+// Fix back/forward cache: page may be restored with opacity 0
+window.addEventListener('pageshow', function () {
+  document.body.classList.add('visible');
 });
