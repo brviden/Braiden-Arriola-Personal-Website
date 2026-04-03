@@ -98,16 +98,21 @@ a:hover {
 }
 
 .home-nav a {
-  display: block;
+  display: inline-block;
+  width: fit-content;
   font-size: 13px;
   line-height: 2.7;
   letter-spacing: 0.2px;
   color: var(--white);
   text-decoration: none;
+  padding: 0 5px;
+  margin-left: -5px;
 }
 
 .home-nav a:hover {
-  text-decoration: underline;
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
 }
 
 .home-nav a .ext {
@@ -422,6 +427,73 @@ a:hover {
 
 .inner-footer a:hover {
   text-decoration: underline;
+}
+
+/* =====================
+   INNER PAGE: WHITE THEME
+   ===================== */
+
+.inner-body {
+  background: var(--white);
+  color: var(--black);
+}
+
+.inner-body .site-clock {
+  color: #333;
+}
+
+.inner-body a:not(.logo-wrap) {
+  color: var(--black);
+}
+
+.inner-body .section-heading {
+  color: var(--black);
+}
+
+.inner-body .about-text p {
+  color: #333;
+}
+
+.inner-body .project-stack,
+.inner-body .exp-location,
+.inner-body .exp-date,
+.inner-body .contact-label {
+  color: #555;
+}
+
+.inner-body .project-entry ul li,
+.inner-body .exp-entry ul li,
+.inner-body .exp-role {
+  color: #333;
+}
+
+.inner-body .project-entry ul li::before,
+.inner-body .exp-entry ul li::before {
+  color: #aaa;
+}
+
+.inner-body .project-entry,
+.inner-body .exp-entry,
+.inner-body .skills-section,
+.inner-body .contact-row {
+  border-color: #e0e0e0;
+}
+
+.inner-body .skills-label {
+  color: var(--black);
+}
+
+.inner-body .skill-tag {
+  color: #444;
+  border-color: #ccc;
+}
+
+.inner-body .inner-footer a {
+  color: var(--black);
+}
+
+.inner-body .contact-value {
+  color: var(--black);
 }
 
 /* =====================
