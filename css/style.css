@@ -218,10 +218,10 @@ a:hover {
    ===================== */
 
 .about-text p {
-  font-size: 13px;
-  line-height: 2.1;
+  font-size: 11px;
+  line-height: 1.6;
   color: #d0d0d0;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 /* =====================
@@ -464,6 +464,9 @@ a:hover {
 
 .inner-body .about-text p {
   color: #333;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .inner-body .project-stack,
