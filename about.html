@@ -6,71 +6,69 @@
   <title>About — Braiden K. Arriola</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="inner-body">
+<body class="inner-page">
 
-  <header class="site-header">
-    <a href="index.html" class="logo-wrap">
-      <div class="logo-box">
-        <span>Braiden Arriola</span>
-      </div>
-    </a>
-    <div class="site-clock" id="clock"></div>
-  </header>
+  <nav class="site-nav-bar">
+    <div class="nav-logo"><a href="index.html"><img src="brand_assets/symbol.png" alt="symbol"></a></div>
+    <div class="nav-links">
+      <a href="projects.html">Work</a>
+      <a href="experience.html">Experience</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
   <main class="inner-main">
-    <p class="section-heading">About</p>
+    <div class="page-head">
+      <h1>About</h1>
+    </div>
 
-    <div class="about-text">
-      <p>
-        Braiden K. Arriola is a Statistics and Data Science student at the University of California,
-        Los Angeles, expected to graduate in June 2027.
-      </p>
-      <p>
-        His work sits at the intersection of data analytics, product management, and predictive
-        modeling — applying statistical rigor to real business problems and translating findings
-        into clear narratives for stakeholders.
-      </p>
-      <p>
-        At BeReal, he mapped user journeys across 20M+ users and authored product requirement
-        documents grounded in evidence. At Beats By Dre, he built consumer insight dashboards
-        and delivered executive strategy reports that aligned cross-functional teams.
-      </p>
-      <p>
-        His analytical projects include a Kaggle Housing Price Prediction model that placed 6th
-        out of 69 teams with 93% accuracy, and a Billboard Top 100 analysis identifying musical
-        trends across two decades of chart data.
-      </p>
-      <p>
-        Based in West Hills, California. Open to internships and collaborative work.
-      </p>
+    <div class="about-grid">
+
+      <div class="about-col">
+        <div class="about-col-label">Bio</div>
+        <p>20 y.o. born in West Hills, California. Statistics and Data Science student at the University of California, Los Angeles — expected graduation June 2027.</p>
+        <p>Currently open to internships in data analytics, product management, and consumer insights.</p>
+        <p>Based in West Hills / Los Angeles, CA.</p>
+      </div>
+
+      <div class="about-col">
+        <div class="about-col-label">Background</div>
+        <p>My first real exposure to data came through a statistics course freshman year — and it clicked immediately. I'd always been drawn to finding patterns in things, and statistics gave me the tools to do that rigorously.</p>
+        <p>Since then, I've worked with BeReal on product roadmaps for 20M+ users, built consumer insight dashboards at Beats By Dre, and competed in Kaggle competitions — placing 6th out of 69 teams on a housing price prediction model with 93% accuracy.</p>
+        <p>I aim to sit at the intersection of data and product: turning messy datasets into decisions that actually ship.</p>
+      </div>
+
+      <div class="about-col">
+        <div class="about-col-label">Connect</div>
+        <p>Currently open to internship opportunities for Summer 2026.</p>
+        <p>For inquiries, reach me at <a href="mailto:koaxx316@gmail.com" style="text-decoration:underline; text-underline-offset:3px;">koaxx316@gmail.com</a></p>
+
+        <div class="connect-links" style="margin-top:20px;">
+          <div class="connect-item">
+            <span class="connect-lbl">GitHub</span>
+            <a href="https://github.com/brviden" target="_blank" class="connect-val">brviden</a>
+          </div>
+          <div class="connect-item">
+            <span class="connect-lbl">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/braidena" target="_blank" class="connect-val">braidena</a>
+          </div>
+          <div class="connect-item">
+            <span class="connect-lbl">Resume</span>
+            <a href="brand_assets/Braiden K. Arriola Resume 2026 (13).pdf" target="_blank" class="connect-val">Download PDF ↗</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <footer>
-    <div class="inner-footer">
-      <a href="projects.html">projects</a>
-      <a href="experience.html">experience</a>
-      <a href="skills.html">skills</a>
-      <a href="contact.html">contact</a>
-    </div>
+  <footer class="site-footer">
+    <a href="projects.html">Work</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
   </footer>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const mm = String(now.getMonth() + 1).padStart(2, '0');
-      const dd = String(now.getDate()).padStart(2, '0');
-      const yyyy = now.getFullYear();
-      let h = now.getHours();
-      const min = String(now.getMinutes()).padStart(2, '0');
-      const ampm = h >= 12 ? 'pm' : 'am';
-      h = h % 12 || 12;
-      document.getElementById('clock').textContent =
-        mm + '/' + dd + '/' + yyyy + ' ' + h + ':' + min + ampm;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-  </script>
   <script src="js/transitions.js"></script>
 </body>
 </html>
