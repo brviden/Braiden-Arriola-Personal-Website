@@ -1,6 +1,6 @@
 function fitHomeName(nameEl) {
-  const style = getComputedStyle(nameEl);
-  const available = nameEl.offsetWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+  const padding = window.innerWidth <= 768 ? 24 : 42;
+  const available = window.innerWidth - padding * 2;
   let lo = 1, hi = 25, mid;
   while (lo < hi - 0.05) {
     mid = (lo + hi) / 2;
